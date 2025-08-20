@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Weather Dashboard - Get real-time weather updates for cities worldwide" />
+    <meta name="keywords" content="weather, forecast, temperature, humidity, wind speed, climate" />
+    <meta name="author" content="Your Name" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Weather Dashboard" />
+    <meta property="og:description" content="Get real-time weather updates for cities worldwide" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Weather Dashboard" />
+    <meta name="twitter:description" content="Get real-time weather updates for cities worldwide" />
+    
+    <title>Weather Dashboard - Real-time Weather Updates</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://openweathermap.org">
+    
+    <style>
+      /* Prevent flash of unstyled content */
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+        min-height: 100vh;
+      }
+      
+      /* Initial loading state */
+      #root {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .initial-loader {
+        color: white;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      
+      .initial-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 1rem;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 2rem; text-align: center; background: #ff7675; color: white;">
+        <h2>JavaScript Required</h2>
+        <p>You need to enable JavaScript to run this weather app.</p>
+      </div>
+    </noscript>
+    
+    <div id="root">
+      <div class="initial-loader">
+        <div class="initial-spinner"></div>
+        <div>Loading Weather App...</div>
+      </div>
+    </div>
+  </body>
+</html>
